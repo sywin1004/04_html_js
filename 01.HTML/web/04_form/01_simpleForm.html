@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>01 Form</title>
+</head>
+<body>
+<!-- form : html 에서 form 은 사용자의 입력을 받아서
+			지정된 대상으로 데이터를 전송하는 역할을 담당하는 태그 -->
+
+<form action="01_simpleTarget.html">
+	이름 : <input type="text" name="username" size="10"/>
+	<br />
+	비밀번호 : <input type="password" name="userpass" size="10"/>
+	<br />
+	
+	<input type="submit" value="로그인"/> &nbsp;
+	<input type="reset" value="초기화" >
+</form>
+
+<!-- 
+	form 안쪽에 데이터 입력을 받기 위해서 input 태그를 사용
+	
+	input : 
+		1. 반드시 form 안에 위치해야 한다.
+		2. 사용자가 입력하는 값을 넣을 수 있는 구성요소를 출력
+		
+	input 태그의 type 속성 :
+		1. text : 입력 값이 화면에 노출되는 가장 기본적인 입력창	
+		2. password : 입력 값이 화면에 노출되지 않는 입력 창
+		3. submit : form 의 데이터를 action 으로 전송하는 버튼
+		4. reset : form 의 데이터를 초기 상태로 돌림
+	submit 의 작동 :
+		1. form 의 action 속성에 지정된 주소(문서 혹은 서버 등)
+		   으로 form 데이터를 전송(input 에 입력된 값)
+		2. action 속성에 지정된 주소로 전송시
+		   query_string 양식으로 전송
+		   주소?input의 name 속성 값=입력값&name속성값=입력값&....
+		   
+		   ? : action 의 주소와 쿼리스트링을 구분하는 구분자
+		   & : 인풋의이름=입력값 을 나누는 구분자
+		   	   인풋이 여러개면 &기호는
+		   	   인풋의 입력을 나누며 여러번 사용될 수 있음
+ -->
+
+
+</body>
+</html>

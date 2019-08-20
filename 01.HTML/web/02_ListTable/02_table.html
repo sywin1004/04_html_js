@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02 table</title>
+<style type="text/css">
+	table, td, th{
+		border: 1px solid black;
+	}
+</style>	
+</head>
+<body>
+<!--  HTMl 문서에서 표 형태를 출력해주는 태그 -->
+<!-- table 태그의 원리	
+	---------------------------
+	1. 테이블은 가로 한 행 단위로 작성하고
+				  한 행 단위로 브라우저가 해석
+	2. tr : table row 테이블의 한 행 생성
+	3. td : table data행 안에 각 칸은 태그로 생성
+	4. th : table header 표의 제목표시 행인 경우
+	              각 칸 생성시 td 대신 th 사용
+	5. td vs th :
+	   th : 기본 가운데 정렬, 기본 볼드체 적용
+	   td : 기본 왼쪽 정렬, 일반 글자 적용	               
+-->
+<h2>간단한 3 x 3 크기의 테이블</h2>
+<hr />
+<!-- table>(tr>td{$}*3)*3 -->
+<table>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>5</td>
+		<td>6</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>8</td>
+		<td>9</td>
+	</tr>
+</table>
+<hr />
+<h2>헤더가 있는 4 x 3 테이블</h2>
+<!-- table>(tr>th*3) + ((tr>td{$}*3))*3 -->
+<table>
+	<tr>
+		<th>제목1</th>
+		<th>제목2</th>
+		<th>제목3</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>333333333333</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+</table>
+<!-- table 은 반드시 tr 단위로 작성됨을 기억할 것. -->
+<!-- tr 한 행 안쪽에 데이터를 작성할 수 있는 td, th 가 나올 수 있다.] -->
+
+
+</body>
+</html>

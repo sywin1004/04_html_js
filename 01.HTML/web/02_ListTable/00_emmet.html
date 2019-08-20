@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>emmet 플러그인 문법</title>
+</head>
+<body>
+
+<h1>Emmet(ex zen-coding) 사용법</h1>
+<hr />
+<h2>emmet 의 수식 형태</h2>
+태그이름&gt;포함될 태그이름&gt;...
+<br /><br />
+&nbsp;&nbsp;&nbsp; * : 동일한 태그를 뒤에 나오는 숫자 만큼 반복
+<br /><br />
+&nbsp;&nbsp;&nbsp; + : 연산자로 묶인 태그들을 서로 포함하지 않는
+<br /><br />
+&nbsp;&nbsp;&nbsp; [속성="값"] : 시작태그에 속성을 부여할 때 태그이름뒤에 붙여서  작성
+<br /><br />
+&nbsp;&nbsp;&nbsp; () : emmet 식의 우선순위를 높이거나 묶어서 실행해야 하는 식을 결정
+<br /><br />
+&nbsp;&nbsp;&nbsp; {} : 태그 안쪽 컨텐츠 작성시 {} dksdp wkrtjd
+<br /><br />
+&nbsp;&nbsp;&nbsp;
+<br /><br />
+&nbsp;&nbsp;&nbsp; $$ : 자동으로 증가하는 숫자 작성
+<br /><br />
+emmet 식을 작성한 뒤 단축키 ctrl + e 로 실행
+<hr />
+<br />
+<!-- ul>[type="square"]>li{목록컨텐츠}*5 -->
+<ul>
+	<li type="square">
+		<li>목록컨텐츠</li>
+		<li>목록컨텐츠</li>
+		<li>목록컨텐츠</li>
+		<li>목록컨텐츠</li>
+		<li>목록컨텐츠</li>
+	</li>
+</ul>
+
+<hr />
+<!-- ul>[type="square"]>li{$$목록 아이템 내용}*5 -->
+<ul>
+	<li type="square">
+		<li>01목록 아이템 내용</li>
+		<li>02목록 아이템 내용</li>
+		<li>03목록 아이템 내용</li>
+		<li>04목록 아이템 내용</li>
+		<li>05목록 아이템 내용</li>
+	</li>
+</ul>
+
+<hr />
+<!-- ul>[type="square"]>li{$목록 아이템 내용}*5 -->
+<ul>
+	<li type="square">
+		<li>1목록 아이템 내용</li>
+		<li>2목록 아이템 내용</li>
+		<li>3목록 아이템 내용</li>
+		<li>4목록 아이템 내용</li>
+		<li>5목록 아이템 내용</li>
+	</li>
+</ul>
+
+<hr />
+<!-- div>(b{볼드체입니다.}+i{이탤릭체}) -->
+<div><b>볼드체입니다.</b><i>이탤릭체</i></div>
+<hr>
+<!-- div>(b{bold}+i{italic}) -->
+<div><b>bold</b><i>italic</i></div>
+<!-- div>b>i{볼드이면서 이탤릭}  -->
+<div><b><i>볼드이면서 이탤릭</i></b></div>
+					 
+</body>
+</html>
