@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- DTD 선언 : 이하 문서의 종류를 나타냄 
+				마크업 특징: DTD가 있거나 없거나 XML: DTD가 있어도되고 없어도된다 html : DTD가 필수 
+				대신 생략해도 <html> 태그로 시작시 자동으로 인식-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>첫 페이지 - 01 Hello</title>
+</head>
+<body>
+<!-- 여기는 주석입니다.
+     이 안에 작성하는 내용은 브라우저에 의해 해석되지 않습니다. -->
+     
+<!-- eclipse 한글 설정
+     1. window 메뉴에서 preferences => web => CSS/HTML/JSP 파일 => 각각 UTF-8 설정
+     2. window 메뉴에서 preferences => workspace 필터 옵션 하단 => text-encording => MS949 => UTF-8
+     
+     HTML, JS 브라우저 설정
+     1. window => preferences => bowser 필터
+     => external bowser 선택 & Chrome 체크 후 Apply
+     
+     2. Emmet 설정 
+     1. help => Install new software...
+     2. http://download.emmet.io/eclipse/updates/ 링크 주소 붙여넣기
+     3. Emmet 플러그인 체크 후 install => 사용권 승인
+     4. install anyway => 이클립스 재시작
+
+ -->
+ <h1>HTML 이제 시작합니다.</h1>
+ <hr>
+ <!-- hr : 화면에 가로줄 출력 -->
+ <!-- HTML 코드 내에서 엔터를 여러번 입력해도
+      브라우저는 줄 바꿈으로 인식하지 않음 -->
+ 
+ <h3>안녕하세요,                   HTML!</h3>
+ <!-- HTML 코드 내에서 space bar 를 여러번 입력해도
+      브라우저는 띄어쓰기로 인식하지 않음.
+      띄어쓰기 1번만 인식 -->
+ <hr />
+ 
+ <!-- 브라우저에 의해 문서가 해석되기 위하여
+      브라우저가 인식하는 태그로 문서가 작성되며
+      브라우저에 내용이 출력되기 위해서는
+      특정한 몇몇 태그 안에 내용이 작성 되어야 한다.
+      
+      브라우저는 공백, 줄바꿈을 HTML 코드 안에서
+      space bar, enter 입력을 해도 인식하지 않음.
+      공백을 주는 태그, 줄바꿈을 주는 태그로
+      브라우저가 인식할 수 있는 태그를 사용해야
+      문서의 내용으로 해석한다.
+       -->
+<br> <!-- 줄바꿈 태그 -->
+<br><br><br>
+
+<!-- ctrl + shift + c : 주석 토글 -->
+<!-- emmet 식 : br * 3 -->
+<br /><!-- <br /> 내용이 없는 태그의 경우 닫는 태그 축약형 -->
+<br />
+<br />
+
+<h3>줄바꿈 후 문서 끝</h3>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
