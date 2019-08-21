@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>01 css 기본</title>
+<style type="text/css">
+	h3 {
+	 color: blue;
+	 text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+<!-- css : Cascading Style Sheet -->
+<!-- HTML 구성요소(태그)들이 브라우저에 어떻게 출력될지
+ 	 그 스타일을 결정짓는다.
+	 
+	 css 는 HTML 의 여러 요소에 공통적인 스타일을
+	 적용하기 편리하도록 만들어져 있다. 	 
+-->
+	<h3>CSS 의 구문구조</h3>
+	<hr />
+	셀렉터 {
+	<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;속성명: 속성값;
+	<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;[속성명: 속성값; ...]
+	<br />
+	}
+	<hr />
+	셀렉터에 올 수 있는 것들
+<!-- 	ul>li*5 -->
+	<ul>
+		<li>HTML 의 태그 이름</li>
+		<li>클래스이름</li>
+		<li>아이디이름</li>
+		<li>속성이름</li>
+		<li>위의 네 가지의 조합</li>
+	</ul>
+	<hr />
+	<h4>예) h3 에 대한 스타일 작성</h4>	
+	<div>
+		h3{ <br />
+		&nbsp;&nbsp;&nbsp;&nbsp; color: blue; <br />
+		&nbsp;&nbsp;&nbsp;&nbsp; text-decoration: underline; <br />
+		} <br />
+	</div>
+	<h3>두번째 제목</h3>
+	<h3>세번째 제목</h3>
+	<h3>네번째 제목</h3>
+	
+</body>
+</html>

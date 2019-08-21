@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06 register Form</title>
+<style>
+table{
+		border: 1px solid black;
+	}
+	
+	tr{
+		border: 1px solid blue;
+	}
+	
+	th, td{
+		border: 1px solid black;
+	}
+</style>
+</head>
+<body>
+<form action="" name="tableInput">
+	<table>
+		<tr>
+			<th colspan="2">가입 폼</th>
+<!-- 			<th></th> -->
+		<tr />
+		<tr>
+			<td> 이름*</td>
+			<td>
+				<input type="text" name="name" size="10" />
+			</td>
+		</tr>
+		<tr>
+			<td>아이디*</td>
+			<td>
+				<input type="text" name="userId" size="10" />
+			</td>
+		</tr>
+		<tr>
+			<td>비밀번호*</td>
+			<td>
+				<input type="password" name="password" size="10" />
+			</td>
+		</tr>
+		<tr>
+			<td>비밀번호 확인*</td>
+
+			<td>
+				<input type="password" name="checkPassword" size="10" />
+			</td>
+		</tr>
+		<tr>
+			<td>성별</td>
+			<td>
+				<input type="radio" name="gender" value="M" /> 남
+				<input type="radio" name="gender" value="F" /> 여
+			</td>
+		</tr>
+		<tr>
+			<td>연령대</td>
+			<td>
+				<select name="age">
+					<option value="" selected="selected">== 연령대를 선택 ==</option>
+					<option value="10대">10대</option>
+					<option value="20대">20대</option>
+					<option value="30대">30대</option>
+					<option value="40대">40대</option>
+					<option value="50대">50대</option>
+					<option value="60대">60대</option>
+					<option value="70대">70대</option>
+					<option value="80대">80대</option>
+					<option value="80대 이상">80대 이상</option>
+				</select></input>
+			</td>
+		</tr>
+		<tr>
+			<td>취미</td>
+			<td>
+				<input type="checkbox" name="hobby" value="스포츠" /> 스포츠
+				<input type="checkbox" name="hobby" value="서핑" /> 서핑
+				<input type="checkbox" name="hobby" value="캠핑" /> 캠핑
+				<input type="checkbox" name="hobby" value="노래" /> 노래
+				<input type="checkbox" name="hobby" value="여행" /> 여행
+			</td>
+		</tr>
+		<tr>
+			<td>이메일*</td>
+			<td>
+				<input type="text" name="emailId" size="7"> @
+				<select name="emailDomain" >
+					<option value="" selected="selected">== 메일주소 선택 ==</option>
+					<option value="naver.com">naver.com</option>
+					<option value="daum.net">daum.net</option>
+					<option value="google.com">google.com</option>
+					<option value="nate.com">nate.com</option>
+				</select></input>
+			</td>
+		</tr>
+		<tr>
+			<td>전화번호</td>
+
+			<td>
+				<select name="phone1"> 
+					<option value="" selected="selected">==번호선택 ==</option>
+					<option value="02">02(서울)</option> 
+					<option value="041">041(충청남도)</option> 
+					<option value="031">031(경기도)</option> 
+					<option value="070">070</option> 
+					<option value="042">042(대전)</option>
+				</select> -
+					<input type="text" name="phone2" size="5" /> -
+					<input type="text" name="phone3" size="5"/>
+			</td>
+		</tr>
+		<tr>
+			<td>주소</td>
+			<td>
+				<select name="address">
+					<option value="" selected="selected">== 주소 선택 ==</option>
+					<option value="경기도">경기도</option>
+					<option value="서울특별시">서울특별시</option>
+					<option value="전라남도">전라남도</option>
+					<option value="전라북도">전라북도</option>
+					<option value="충청남도">충청남도</option>
+					<option value="충청북도">충청북도</option>
+					<option value="경상북도">경상북도</option>
+					<option value="경상남도">경상남도</option>
+					<option value="강원도">강원도</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>소개말</td>
+			<td>
+				<textarea name="textarea" id="" cols="30" rows="10"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<th colspan="2">
+				<input type="submit" value="가입하기" />
+				<input type="reset" value="초기화" />
+			</th>
+<!-- 			<th></th> -->
+		</tr>
+					
+	</table>
+</form>
+
+
+</body>
+</html>

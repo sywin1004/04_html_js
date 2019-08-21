@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02 in-line css</title>
+<style type="text/css">
+	/* internal css */
+	h3 {
+	 color: blue;
+	 text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+	<h3>in-line css</h3>
+	<hr />
+	<p>
+		css 는 세 가지 형태로 HTML 문서에 삽입할 수 있다.
+	</p>
+	<ul>
+		<li>in-line</li>
+		<li>internal css</li>
+		<li>external css</li>
+	</ul>
+	<hr />
+	<p>
+		in-line css : 는 HTML 의 시작 태그에 style="" 속성으로 명시
+	</p>
+	<p>
+		in-line 방식으로는 문서 전체에 걸친 스타일 적용 불가.
+		스타일이 지정된 해당 태그 1개에만 적용.
+	</p>
+	<hr />
+	<h3>두번째 헤드라인</h3>
+	<h3>세번째 헤드라인</h3>
+	<h3>네번째 헤드라인</h3>
+	<hr />
+	아래 h3 는 in-line css 가 적용됨.
+	<h3 style="color:red; text-decoration: overline;">다섯번째 헤드라인</h3>
+	<hr />
+	개별 태그의 시작태그에 style="" 방식으로 in-line css <br />
+	작성된 css가 세 종류의 css 중 가장 <b style="color:red; text-decoration: underline;">우선순위</b>가 높다. <br />
+	따라서 설정된 경우 모든 다른 설정(internal, external) 을 덮어씌우고 적용된다.
+</body>
+</html>

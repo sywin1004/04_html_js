@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>05 textarea</title>
+</head>
+<body>
+<!-- form 안에 textarea 태그 -->
+<!-- textarea : 여러 줄의 문자 입력을 받을 수 있는 form 의 한 요소 -->
+
+<!-- form[name="introForm" action=""]>textarea[rows="10" cols="30"]+input[type="submit" value=""]+input[type="reset" value=""] -->
+<form action="" name="introForm">
+	자기소개<br />
+	<textarea name="intro" cols="30" rows="10"></textarea>
+	<br />
+	<input type="submit" value="저장하기" />&nbsp;
+	<input type="reset" value="취소하기" />
+</form>
+
+<!-- textarea : 자동으로 스크롤 생성되는 입력창
+	1. form 안에 위치
+	   input, select 와 같이 form 안쪽에 위치해야 하는 요소
+	2. 반드시 닫는 태그 명시 </textarea>
+	   닫는 태그 축약형 <textarea.... /> 사용 금지
+	3. 크기는 가로 : cols(colloms), 세로 : rows 속성으로 조절 
+-->
+</body>
+</html>

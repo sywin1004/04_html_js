@@ -1,0 +1,17 @@
+@charset "UTF-8";
+h3 {
+	color: blue;
+	text-decoration: overline;
+	
+}
+
+h2 {
+	color: red;
+	text-decoration: underline;
+	
+}
+
+p {
+	color: navy;
+	font-size: 30px;
+}

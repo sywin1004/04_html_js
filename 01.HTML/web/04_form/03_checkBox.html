@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03 checkbox</title>
+</head>
+<body>
+<!-- form input type 중 checkbox 타입 -->
+<!-- form>(input[type="checkbox" name="hobby"]+br)*5+input[type="submit"]+input[type="reset"] -->
+<form name="hobbyForm" action="">
+<h3>취미 선택</h3>
+<hr />
+	<input type="checkbox" name="hobby" value="photo" checked="checked"/> 사진찍기
+	<br /> 
+	<input type="checkbox" name="hobby" value="cinema"/> 영화보기
+	<br />
+	<input type="checkbox" name="hobby" value="animation"/> 애니메이션 보기
+	<br />
+	<input type="checkbox" name="hobby" value="baseball"/> 야구보기
+	<br />
+	<input type="checkbox" name="hobby" value="game" checked="checked"/> 게임
+	<br />
+	<input type="submit" value="전송하기"/>&nbsp;
+	<input type="reset" value="초기화"/>
+</form>
+
+<!-- checkbox : 중복선택 가능한 선택지 입력을 받기 위해 사용
+	---------------------------------------------------------
+	1. name 이 동일한 checkbox 는 하나의 그룹으로 설정됨.
+	2. form 의 action 에 지정된 곳으로 데이터 전달시 세 종류가 전달됨
+		(1) null : 선택하지 않았을 때
+			==> 주소?
+		(2) 데이터1개 : 1개만 선택했을 때
+			==> 주소?hobby=game
+		(3) 배열 : 데이터를 2개 이상 선택했을 때
+			==> 주소?hobby=game&hobby=cinema&hobby=baseball 
+	3. checked="checked" 속성 사용으로 기본 체크 설정
+	
+ -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>04 select</title>
+</head>
+<body>
+
+
+<!-- form 안에 select 태그 -->
+<!-- 여러가지 선택지 중에서 하나를 선택
+	 select 는 전화번호 앞자리나 지역번호 선택할 때 자주 사용되는 형태
+	 이메일의 도메인 선택 등으로 사용되는 경우가 다수 -->
+<!-- form[name="emailform action=""]>select[name="email"]>(option[value=""]*5) -->
+<form action="" name="emailform action=">
+	email 입력:
+	<input type="text" name="emailId" /> @
+	<select name="emailDomain">
+		<option value="" selected="selected"> === 이메일 선택 ===</option>
+		<option value="naver.com"> naver.com</option>
+		<option value="daum.net">daum.net</option>
+		<option value="gmail.com">gmail.com</option>
+		<option value="nate.com">nate.com</option>
+		<option value="yahoo.co.kr">yahoo.co.kr</option>
+	</select>
+	<input type="submit" value="전송하기"/>&nbsp;
+	<input type="reset" value="초기화"/>
+</form>
+<!-- select 태그는 value 를 갖기 위해 안쪽에 option 태그가 여러개 등장해야 한다.
+	 
+	 1. 데이터의 이름은 select 의 name 속성 값으로 전달
+	 2. 데이터의 값은 option 의 value 속성 값으로 전달
+	 3. 기본 선택 옵션을 설정하려면 selected="selected" 속성 사용 
+
+ -->
+	
+</body>
+</html>
