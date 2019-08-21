@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06 box model</title>
+<style type="text/css">
+	div {
+		width: 300px;
+		height: 300px;
+		background-color: lightgrey
+	}
+	
+	div#div1 {
+		/* 숫자 4개를 나열 할 때, 순서대로 top, light, bottom, left */
+		margin: 10px 20px 40px 20px;
+		
+		/* 숫자 1개를 쓰면 4방향 테두리에 모두 적용 */
+		padding: 25px;
+		border: 25px solid green;
+		
+		/* 숫자 2개를 쓰면 상하, 좌우 설정 */ 
+	}
+</style>
+</head>
+<body>
+	<!-- box model -->
+	<h3>CSS BOX MODEL</h3>
+	<hr />
+	<!-- img[src="./images/box-model.png"] -->
+	<img src="./images/box-model.PNG" /> <br />
+	HTML 의 모든 구성요소들에 적용되는 <b style="color:red;">BOX MODEL</b>
+<!-- 	ul>li*4	 -->
+	<ul>
+		<li>margin  : 경계선 밖의 여백 영역, 다른 요소와의 여백 지정에 사용</li>
+		<li>border  : 경계선</li>
+		<li>padding : 경계선과 컨텐츠 사이의 여백 영역</li>
+		<li>content : 표시되는 컨텐츠 내용</li>
+	</ul>
+	<hr />
+	
+	<p>
+		CSS 박스 모델은 HTML 문서를 구성하는 요소들을 브라우저에 그려서 나타내는데
+		일괄적으로 적용되는 모델입니다.
+	</p>
+	<p>
+		HTML 문서의 구성요소들을 단계적으로 감싸고 있는
+		형태로 구성되어 있으며,
+		기준 요소 두 가지는 경계선을 나타내는 border와
+		실제 출력 내용을 나타내는 content 입니다.
+	</p>
+	<p>
+		border 바깥쪽 역역을 margin
+		border와 content 사이 영역을 padding 이라고 합니다.
+	</p>
+	<div id="div1">
+		이 div 영역에는 box-model 에 따라
+		margin : top 10px, light 20px, bottom 40px, left 20px 이 적용되었고<br />
+		padding : 상하좌우 모두 25px 이 적용되었으며 <br />
+		border : 25px 의 녹색 실선으로 설정되었습니다. 
+		<br /><br />
+		이 div 크기는 가로 세로 300 x 300 으로 설정되었습니다.
+		
+	</div>
+</body>
+</html>
