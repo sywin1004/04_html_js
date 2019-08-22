@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03 자바스크립트 변수 사용</title>
+<script type="text/javascript">
+	// 문자 타입의 값을 할당
+	name = "박상용";
+	id = "sywin1004";
+	
+	// 숫자 타입의 값을 할당
+	// 문장 종료기호(;) 누락
+	var number = 99 
+	
+	// 논리형 값 할당
+	flag = false;
+	
+	// 아직 자료형이 지정되지 않은 선언
+	var myCar;
+	var myCar2 = null;
+	
+	// ---------------------------------------
+	// --- document.write(); 로 문서에 변수 값 출력
+	document.write("<h3> 자바 스크립트 변수 출력</h3>");
+	document.write("<hr />");
+	document.write("이름:" + name + "<br />");
+	document.write("아이디:" + id + "<br />");
+	document.write("류현진 백넘버: " + number + "<br />");
+	document.write("flag:" + flag + "<br />");
+	document.write("<hr />");
+	document.write("아무런 값이 할당된 적이 없는 변수 상태");
+	document.write("myCar: " + myCar + "<br />");
+	document.write("<hr />");
+	document.write("자바 스크립트에서 null 로 초기화 된 경우");
+	document.write("myCar2: " + myCar2 + "<br />");
+	document.write("<hr />");
+	
+	// 문자형이 담겨있던 변수에 숫자를 할당
+	name = 10000;
+	
+	document.write("name: " + name + "<br />")
+	
+</script>
+</head>
+<body>
+	<h3>자바 스크립트의 변수 특징</h3>
+<!-- 	ul>li*5 -->
+	<ul>
+		<li>변수의 타입이 아닌 값의 타입에 따라 타입이 결정됨</li>
+		<li>선언시 var 키워드를 붙여도 안붙여도 사용 가능</li>
+		<li>스크립트 내에서 변수에 다른 타입의 값을 재할당 해도 허용 됨.</li>
+		<li>undefined : 아무런 값이 할당된 적 없는 변수의 상태</li>
+		<li>null : 최소한 null 로 초기화 된 상태</li>
+	</ul>
+</body>
+</html>

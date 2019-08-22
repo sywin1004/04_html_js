@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>01 internal javascript(내부 자바스크립트)</title>
+<!-- 1. HEAD 태그 안에 선언하는 javascript -->
+<script type="text/javascript">
+	// 브라우저에 따라 자바 스크립트가 지원되지 않는 경우를 대비하여 HTML 주석 안에 자바 스크립트 작성하기도 한다.
+	<!--// 
+	document.write("&lt;HEAD&gt; 태그에서 작성한 스크립트 출력입니다 <br />"); 
+	//-->
+	/*
+	자바 스크립트
+	다행 주석 (여러 줄 주석)
+	document.write("&lt;HEAD&gt; 태그에서 작성한 스크립트 출력입니다2 <br />");
+	*/
+</script>
+</head>
+<body>
+	<!-- 2. BODY 태그 안에 선언하는 javascript -->
+	<script type="text/javascript">
+		document.write("&lt;BODY&gt; 태그에서 작성한 스크립트 출력입니다.<br />");
+	</script>
+	<!-- 내부 자바스크립트
+		 -------------------------------------------
+		 1. 스크립트 태그는 하나의 HTML 안에 여러번 등장 가능
+		 
+		 2. 문서의 위에서부터 아래로 순차적으로 해석되어 문서에 적용됨.
+		 
+		 3. 일반적인 용법으로 HEAD 에 선언
+		 
+		 4. 경우에 따라서 BODY 에서 실행되어야 하는 경우 BODY 태그 안에 <script> 태그 선언하여 실행 가능
+		 
+	 -->
+</body>
+</html>
