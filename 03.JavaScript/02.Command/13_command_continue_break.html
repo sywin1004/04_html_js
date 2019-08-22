@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>13 continue, break</title>
+<script type="text/javascript">
+	document.write("<h3>continue 구문</h3>");
+	document.write("continue; 이후 구문 무시 => 가장 가까운 반복구문의 시작으로 돌아가 다음 반복 실행<br />");
+	document.write("<hr />");
+	
+	// 0 ~ 10 사이의 홀수의 합 구하기
+	sum = 0;
+	
+	for (idx = 1; idx <= 10; idx++) {
+		if (idx % 2 == 0) {
+			continue;
+		} 
+		sum += idx;
+	}
+	
+	document.write("0 ~ 10 사이의 홀수의 합 :" + sum + "<br />");
+	
+	document.write("<h3>break 구문</h3>");
+	document.write("break; 가장 가까운 반복구문을 빠져나감<br />");
+	document.write("<hr />");
+	
+	// 0 ~ 10 사이의 홀수의 합
+	sum = 0;
+	
+	for (idx = 0; idx < 100; idx++) {
+		
+		if (idx == 11)
+			break;
+		if (idx % 2 == 0)
+			continue;
+		sum += idx;
+	}
+	
+	document.write("0 ~ 10 사이의 홀수의 합 :" + sum + "<br />");
+</script>
+</head>
+<body>
+
+</body>
+</html>

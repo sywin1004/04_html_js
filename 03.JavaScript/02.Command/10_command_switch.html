@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>10 switch 구문</title>
+<script type="text/javascript">
+	var input = 89;
+	
+	// 1. 비교값이 숫자인 경우
+	document.write("<h3>switch 로 숫자 비교</h3>");
+	
+	switch (input % 2) {
+	case 0:
+		document.write("입력 값:" + input + "은(는) 짝수입니다.");
+		break;
+	case 1:
+		document.write("입력 값:" + input + "은(는) 홀수입니다.");
+		break;
+		
+		default:
+			document.write("입력이 잘못되었습니다.");
+	}
+	
+	document.write("<hr />");
+	// 2. 비교값이 논리 값인 경우
+	document.write("<h3>switch 로 논리 값 비교</h3>");
+	document.write("<hr />");
+	
+	input = true;
+	
+	switch (input) {
+	case true:
+		document.write("입력 값:" +input + "은(는) 참 입니다.");
+		break;
+	case false:
+		document.write("입력 값:" +input + "은(는) 거짓 입니다.");
+		break;
+		
+		default:
+			document.write("입력이 잘못되었습니다.");
+	}
+	document.write("<hr />");
+	
+	// 3. 비교값이 문자 값인 경우
+	document.write("<h3>switch 로 문자 값 비교</h3>");
+	document.write("<hr />");
+	
+	input = "a";
+	
+	switch (input) {
+	case "a":
+		document.write("학점은 A 입니다. <br />");
+		break;
+	case "b":
+		document.write("학점은 B 입니다. <br />");
+		break;
+	case "c":
+		document.write("학점은 C 입니다. <br />");
+		break;
+	case "d":
+		document.write("학점은 D 입니다. <br />");
+		break;
+		
+		default:
+			document.write("입력이 잘못되었습니다. <br />");
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
