@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>16 내장함수 : confirm()</title>
+<script type="text/javascript">
+	// confirm(); 확인, 취소 버튼이 있는 선택 창
+	//		  ==> 확인, 취소 선택 결과에 따라서 논리 값을 리턴(true, false)
+	
+	choose = confirm("취소하시겠습니까?")
+	
+	if (choose) {
+		document.write("취소되었습니다.<br />");
+	} else {
+		document.write("그대로 진행합니다.<br />");
+	}
+	
+	// confirm() 함수의 리턴 값은
+	// 이 후 if ~ else 등의 구문에 조건으로 사용 가능
+	
+	if (choose == true) {
+		document.write("취소되었습니다.2<br />");
+	} else {
+		document.write("그대로 진행합니다.2<br />");
+	}
+	
+	// confirm() 함수의 리턴 값 자체가 true, false 이기 때문에 다시 true, false 와 비교가 필요 없음.
+</script>
+</head>
+<body>
+
+</body>
+</html>

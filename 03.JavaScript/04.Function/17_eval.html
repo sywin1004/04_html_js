@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>17 내장함수 : eval()</title>
+<script type="text/javascript">
+	// eval(); 문자열을 수식으로 파싱(parsing:해석)
+	// 		   하여 산술 연산이 가능하도록 하는 함수
+	var expr = "100 * 5";
+	document.write("<h3>eval() 사용 전, 문자열로 출력</h3>");
+	document.write("Expression:expr=" + expr + "<br />");
+	document.write("<hr />");
+	
+	document.write("<h3>eval() 사용 후, 연산결과 출력</h3>");
+	document.write("Expression:expr(" + expr + ")=" + eval(expr) + "<br />");
+</script>
+</head>
+<body>
+
+</body>
+</html>

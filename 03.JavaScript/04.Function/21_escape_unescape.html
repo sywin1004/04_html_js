@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>21 내장함수: escape(), unescape()</title>
+<script type="text/javascript">
+	// escape(); 입력문자열 ==> URL encode 코드화
+	
+	// unescape(); URL encode 코드 ==> 문자화
+	
+	input = "$";
+	
+	document.write("<h3>문자 &lt;==&gt; URL encode 변환</h3>");
+	document.write("<hr />");
+	document.write("escape(" + input + ")=" + escape(input) + "<br />");
+	
+	document.write("unescape(\"%24\")=" + unescape("%24") + "<br />");
+</script>
+</head>
+<body>
+
+</body>
+</html>

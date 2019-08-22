@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>20 내장함수: parseInt()</title>
+<script type="text/javascript">
+	// parseInt(); 입력된 문자열을 기본 10진수화 하여 숫자로 변환하여 리턴하는 함수
+	//			   혹은 두번째 입력 매개변수로 변환할 진법 선택 가능
+	
+	document.write("<h3>parseInt(): 문자열 정수 변환</h3>");
+	document.write("<hr />");
+	
+	// 정수만 입력된 경우
+	document.write("parseInt(\"10\")=" + parseInt("10") + "<br />");
+	
+	// 실수 형태가 입력된 경우
+	document.write("parseInt(\"99.999\")=" + parseInt("99.999") + "<br />");
+	
+	// 숫자와 공백이 혼합된 입력
+	document.write("parseInt(\"12 34 56\")=" + parseInt("12 34 56") + "<br />");
+	
+	// 문자로만 입력이 된 경우
+	document.write("parseInt(\"nice!\")=" + parseInt("nice!") + "<br />");
+	
+	// 숫자 공백 문자 혼합 입력
+	document.write("parseInt(\"5 tears old!\")=" + parseInt("5 years old!") + "<br />");
+	
+	// 두번째 매개변수로 진법 입력
+	document.write("parseInt(\"10\", 10)=" + parseInt("10", 10) + "<br />");
+	document.write("parseInt(\"10\", 8)=" + parseInt("10", 8) + "<br />");
+	document.write("parseInt(\"10\", 16)=" + parseInt("10", 16) + "<br />");
+	
+	// 입력 형태의 문자가 8진법 형태일 때
+	// :0숫자(0~7)
+	document.write("parseInt(\"010\")=" + parseInt("010") + "<br />");
+	// 입력 형태의 문자가 16진법 형태일 때
+	// :0X(0~9, a~f, A~F)
+	document.write("parseInt(\"0X10\")=" + parseInt("0X10") + "<br />");
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>18 내장함수 : inNaN()</title>
+<script type="text/javascript">
+	//isNaN(); is Not a Number ? 의 약자
+	//         함수 매개변수로 입력된 값이 숫자형인지 아닌지 판별하여
+	//         논리형 (true, false) 로 리턴하는 함수
+	
+	// 		   입력 값이 숫자형 : false
+	//		   입력 값이 숫자가 아닐 때 : true
+	//         입력 값이 논리형 : true==1, false==0 으로 취급하여 숫자취급하므로 false;
+	
+	value1 = "abc";
+	value2 = 99;
+	value3 = true;
+	
+	document.write("<h3>isNaN() 함수 사용 결과</h3>"); 
+	document.write("<hr />");
+	document.write("isNaN(" + value1 + ")=" + isNaN(value1) + "<br />");
+	document.write("isNaN(" + value2 + ")=" + isNaN(value2) + "<br />");
+	document.write("isNaN(" + value3 + ")=" + isNaN(value3) + "<br />");
+</script>
+</head>
+<body>
+
+</body>
+</html>

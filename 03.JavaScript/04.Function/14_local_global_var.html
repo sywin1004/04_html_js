@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>14 지역, 전역 변수</title>
+<script type="text/javascript">
+	// 1. 전역 변수 : 이 문서 어디에서나 사용 가능
+	// (1) 함수 선언 외부에서 변수가 선언되면
+	// (2) 함수 선언 내부에서 선언되었을 때 var 키워드 없이 이름으로 바로 시작하면
+	
+	// 전역 변수 선언
+	global1 = 100;
+	var global2 = 200;
+	// 변수 이름 앞에 var 키워드가 붙었어도
+	// 함수 외부 선언이므로
+	// 이 문서 어디에서나 사용가능한 전역변수
+	
+	
+	// 2. 지역 변수 : 선언된 함수 내부에서만 사용 가능
+	//    함수 내부에서 var 키워드와 함께 선언된 변수
+	
+	// 자바스크립트의 함수 선언
+	// functoin 함수이름(매개변수) {
+	//	
+	//	}
+	
+	// 두 개의 값을 입력받아서 더한 결과를 출력하는 함수 정의
+	function add1(x, y) {
+		// x, y 는 매개변수
+		// 매개변수는 함수 내부에서만 사용 가능
+		
+		// 함수 내부에서 지역변수 선언 : var 키워드 사용
+		var result = 0;
+		// 함수 내부에서 전역변수 선언 : var 키워드 미사용
+		sum = 0;
+		
+		result = x + y;
+		sum = x + y;
+		
+		document.write(x + "+" + y + "=" + result + "<br />");
+		document.write(x + "+" + y + "=" + sum + "<br />");
+	}
+	
+	// 두 개의 값을 입력받아서
+	// 더한 결과를 리턴하는 함수
+	function add2(x, y) {
+		return x + y;
+	}
+	
+	// 자바 스크립트의 함수는
+	// return 구문의 존재여부가
+	// 함수 선언에 크게 문법적인 영향을 미치지 않는다.
+	
+</script>
+</head>
+<body>
+<!-- HEAD 에서 선언된 함수의 실행은 script 태그 내에서 호출되어야 함 -->
+<script type="text/javascript">
+	document.write("<h3>자바 스크립트 함수 호출</h3>");
+	document.write("<hr />");
+	// global1, global2, sum 변수는 전역변수이르모 이 문서 어디서나 사용 가능
+	add1(40, global1);
+	add1(50);
+	document.write("sum=" + sum + "<br />");
+	document.write("global1=" + global1 + "<br />");
+	document.write("global2=" + global2 + "<br />");
+	document.write("<hr />");
+	
+	add1("hell", ", javascript!");
+	document.write("<hr />");
+	
+	// 리턴하는 함수 : add2 사용
+	document.write("add2(4, 5)=" + add2(4, 5) + "<br />");
+	document.write("<hr />");
+	
+	// 지역변수(매개변수인 x, y) 를
+	// 함수 외부에서 사용하려 할 
+	document.write("<h3>매개변수, 지역변수의 잘못된 사용</h3>");
+	document.write("<hr />");
+	// 이 윗줄까지 실행되고 스크립트 실행 중단
+// 	document.write("x=" + x + "<br />");
+// 	document.write("y=" + y + "<br />");
+// 	document.write("result=" + result + "<br />");
+	document.write("<hr />");
+	document.write();
+	document.write();
+	document.write();
+	document.write();
+	document.write();
+	document.write();
+	document.write();
+	document.write();
+</script>
+</body>
+</html>
