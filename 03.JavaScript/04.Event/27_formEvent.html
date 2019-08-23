@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>27 이벤트 : form 이벤트</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript">
+	// 값이 입력되는 폼을 받는 전역변수
+	var myForm; 
+	
+	// form 객체 출력해서 확인
+	consol.log(myForm);
+	
+	// 비밀번호 글자수가 5개 이상인지 체크
+	function checkPassLength() {
+		
+		myForm = document.myForm;
+		// 비밀번호 입력 인풋은
+		// myForm.name 속성 값으로 접근 가능
+		var password = myFrom.password;
+		var passLength = password.value.length;
+		
+		console.log("비번입력값=" + password.value);
+		console.log("비번길이=" + password.value.length);
+		
+		// 글자의 길이가 5글자 이상이면 true
+		// 5글자보다 짧으면 false 를 리턴할 변수
+		var flag = false;
+		
+		if (password == undefined || passLength < 5) {
+			var pwWarn = document.getElementById("pwWarn");
+			pwWarn.innerHTML = "비번길이 5글자 이상이어야 합니다.";
+			password.focus();
+		} else {
+			flag = true;
+		}
+		
+		return flag;
+	}
+	
+</script>
+</head>
+<body>
+<form action="next.html" name="myForm">
+<table class="w3-table-all w3-hoverable">
+	<tr>
+		<th colspan="2" style="width: 50%" class="w3-center">회 원 가 입</th>
+	</tr>
+	<tr>
+		<th>아이디*</th>
+		<td>
+			<input type="text" name="userId" required="required" />
+		</td>
+	</tr>
+	<tr>
+		<th>이 름*</th>
+		<td>
+			<input type="text" name="userName" required="required" />
+		</td>
+	</tr>
+	<tr>
+		<th>비밀번호*</th>
+		<td>
+			<input type="password" name="password" required="required" onblur="checkPassLength();"/>
+			<br />
+			<span id="pwWarn">*5글자 이상 입력</span>
+		</td>
+	</tr>
+	<tr>
+		<th>비밀번호 확인*</th>
+		<td>
+			<input type="password" name="passConfirm" required="required" />
+		</td>
+	</tr>
+	<tr>
+		<th>이베일</th>
+		<td>
+			<input type="text" name="email" />
+		</td>
+	</tr>
+	<tr>
+		<th>성별</th>
+		<td>
+			<input type="radio" name="gender" value="Male" id="M" class="w3-radio"/ >
+			<label for="M">남성</label>
+			<input type="radio" name="gender" value="Female" id="F" class="w3-radio"/>
+			<label for="F">여성</label>
+		</td>
+	</tr>
+	<tr>
+		<th>취미</th>
+		<td>
+			<input type="checkbox" name="hobby" value="sing" id="h1" class="w3-check"/>
+			<label for="h1">노래하기</label>
+			<input type="checkbox" name="hobby" value="dance" id="h2" class="w3-check"/>
+			<label for="h2">춤</label>
+			<input type="checkbox" name="hobby" value="racing" id="h3" class="w3-check"/>
+			<label for="h3">레이싱</label>
+			<input type="checkbox" name="hobby" value="surfing" id="h4" class="w3-check"/>
+			<label for="h4">서핑</label>
+		</td>
+	</tr>
+	<tr>
+		<th>주소</th>
+		<td>
+			<select name="address" id=""address"">
+				<option value="" selected="selected" class="w3-container">== 주소를 선택하세요 ==</option>
+				<option value="seoul">서울</option>
+				<option value="busan">부산</option>
+				<option value="daegu">대구</option>
+				<option value="daejeon">대전</option>
+				<option value="jeju">제주</option>
+				<option value="asan">아산</option>
+				<option value="overseas">해외</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="w3-center">
+			<input type="submit" value="전송" class="w3-btn w3-white w3-border w3-border-red w3-round" /> &nbsp;
+			<input type="reset" value="초기화" class="w3-btn w3-white w3-border w3-border-red w3-round" />
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
