@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>22 이벤트 : onclick</title>
+<script type="text/javascript">
+	function myClick() {
+		document.write("안녕하세요.<br />");
+		document.write("클릭이 일어났어요!<br />");
+	}
+	
+	/* **************************
+	 * input 으로 입력된 내용을
+	 * alert() 창에 띄우는 함수
+	 */
+	function myAlert(input) {
+		alert(input);
+	}
+</script>
+</head>
+<body>
+	<h3>onclick 이벤트</h3>
+	<hr />
+	<h4>아래의 버튼을 클릭하면 [안녕하세요. 클릭이 일어났어요.] 가 출력됩니다.</h4>
+	<hr />
+	<button onclick="myClick();">클릭하세요</button>
+	<button onclick="alert('안녕하세요')">alert창 띄우기</button>
+	<button ONCLICK="myAlert('첫 클릭이벤트 처리!');">클릭하세요(2)</button>
+	
+	<!-- 이벤트 핸들러인 onXxx 형태의 속성값은 대소문자 구별이 없음
+		 다만 문서 읽기 편의를 위하여 캐멀로테이션 적용하는 경우가 많음
+	 -->
+	
+</body>
+</html>

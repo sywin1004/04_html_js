@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>24 이벤트 : mouseDown, mouseUp</title>
+<script type="text/javascript">
+	// 마우스 키 다운 이벤트 발생시 처리 담당 함수
+	function myMouseDown() {
+		document.getElementById("contents").style.color ="red";
+	}
+	
+	// 마우스 키 업 이벤트 발생시 처리 담당 함수
+	function myMouseUp() {
+		document.getElementById("contents").style.color = "blue";
+	}
+	
+	//마우스 더블클릭시 이벤트 처리 담당 함수
+	function myDblClick() {
+		document.getElementById("contents").style.color = "black";
+	}
+</script>
+</head>
+<body>
+	<h3>마우스 다운, 업 이벤트</h3>
+	<hr />
+ 	<div id="contents" onMouseDown="myMouseDown();" onMouseUp="myMouseUp();" ondblclick="myDblClick();">
+ 	 	글자위에서 마우스 버튼을 누르면 글자색이 빨간색으로 변경<br /><br />
+ 		글자위에서 마우스 버튼이 눌렸다 떼어지면 글자색이 파란색으로 변경<br /><br />
+ 		
+ 	</div>
+</body>
+</html>
