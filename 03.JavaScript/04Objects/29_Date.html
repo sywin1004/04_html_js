@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>29 내장객체: Date</title>
+<script type="text/javascript">
+	// 현재날짜 Date 객체 생성
+	var today = new Date();
+	
+	// 화면 출력
+	document.write("년도:" + today.getFullYear() + "<br />");
+	document.write(" 달:" + (today.getMonth() + 1) + "<br />");
+	document.write("날짜:" + today.getDate() + "<br />");
+	document.write("요일:" + today.getDay() + "<br />");
+	document.write(" 시:" + today.getHours() + "<br />");
+	document.write(" 분:" + today.getMinutes() + "<br />");
+	document.write(" 초:" + today.getSeconds() + "<br />");
+	document.write("밀리초:" + today.getMilliseconds() + "<br />");
+	document.write("<hr />");
+	
+	// 년도를 2020년으로 변경
+	today.setYear(2020);
+	document.write("today=" + today);
+	document.write("<hr />");
+	
+	// 날짜 생성시 매개변수를 넘겨서 생성
+	// 2019년 10월 3일 0시 0분 0초
+	var date1 = new Date(2019, 10, 3);
+	// 2020년 1월 23일 8시 10분 58초
+	var date2 = new Date(2020, 1, 23, 8, 10, 58);
+	// 2019년 8월 22일 13시 49분 52초
+	var date3 = new Date("Aug 22 2020 13:49:57")
+	// 1970년 1월 1일 0시 0분 0초
+	var date4 = new Date(0);
+	document.write(date1);
+	document.write("<hr />");
+	document.write(date2);
+	document.write("<hr />");
+	document.write(date3);
+	document.write("<hr />");
+	document.write(date4);
+	document.write("<hr />");
+	document.write();
+</script>
+</head>
+<body>
+
+</body>
+</html>

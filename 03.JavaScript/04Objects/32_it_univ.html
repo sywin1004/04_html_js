@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>32 내장객체와 이벤트 처리</title>
+<script type="text/javascript">
+	// Array 객체 선언
+	userIds = new Array ("M001", "M002", "M003", "M004", "M005");
+	userNames = new Array ("조혜진", "최현정", "김지후", "정현수", "조기현");
+	addresses = new Array("광명시", "아산시", "수원시", "시흥시", "수원시");
+	
+	// 목록 폼에 구성원 정보 동적으로 그리는 함수
+	function displayMembers() {
+		for (var idx = 0; idx < userIds.length; idx++) {
+			document.write("<tr>");
+			document.write("<td>type='radio' name='detail' onclick='selectMember();' /></td>")
+				document.write("<td></td>");
+				document.write("<td>" + userIds[idx] + "</td>");
+				document.write("<td>" + userNames[idx] + "</td>");
+				document.write("<td>" +addresses[idx] + "</td>");
+			document.write("</tr>");
+		}
+	}
+	
+	// 목폭폼에서 라디오 클릭시 이벤트 처리 함수
+	function selectMember() {
+		for (var idx = 0; idx < userIds.length; idx++) {
+			if (document.listForm.detail[idx].checked) {
+				document.detailForm.userId.value = userIds[idx];
+				document.detailForm.userName.value = userNames[idx];
+				document.detailForm.address.value = addresses[idx];
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<h3>청해진 IT-UNIV 구성원</h3>
+	<hr />
+	<form action="" naed="detailForm">
+	<table>
+		<tr>
+			<td>아이디</td>
+			<td>
+				<input type="text" name="userId" />
+			</td>
+		</tr>
+		<tr>
+			<td>이름</td>
+			<td>
+				<input type="text" name="userName" />
+			</td>
+		</tr>
+		<tr>
+			<td>주소</td>
+			<td>
+				<input type="text" name="address" />
+			</td>
+		</tr>
+	</table>
+	</form>
+	
+	<hr>
+	
+	<form action="" name="listForm">
+	<table>
+		<tr>
+			<th></th>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>주소</th>
+		</tr>
+		<!-- 스크립트로 배열에 있는 값을 사용하여
+			 동적으로 테이블 그려 삽입 -->
+		<script type =
+	</table>
+	</form>
+	
+	
+</body>
+</html>

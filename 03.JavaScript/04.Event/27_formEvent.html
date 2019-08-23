@@ -9,7 +9,7 @@
 	var myForm; 
 	
 	// form 객체 출력해서 확인
-	consol.log(myForm);
+// 	consol.log(myForm);
 	
 	// 비밀번호 글자수가 5개 이상인지 체크
 	function checkPassLength() {
@@ -17,7 +17,7 @@
 		myForm = document.myForm;
 		// 비밀번호 입력 인풋은
 		// myForm.name 속성 값으로 접근 가능
-		var password = myFrom.password;
+		var password = myForm.password;
 		var passLength = password.value.length;
 		
 		console.log("비번입력값=" + password.value);
@@ -27,21 +27,95 @@
 		// 5글자보다 짧으면 false 를 리턴할 변수
 		var flag = false;
 		
+		//비밀번호 경고가 출력될 span
+		var pwWarn = document.getElementById("pwWarn");
+		
 		if (password == undefined || passLength < 5) {
-			var pwWarn = document.getElementById("pwWarn");
+			pwWarn.style.color = "red";	
 			pwWarn.innerHTML = "비번길이 5글자 이상이어야 합니다.";
 			password.focus();
 		} else {
 			flag = true;
+			pwWarn.style.color = "black";	
+			pwWarn.innerHTML = "";
 		}
 		
 		return flag;
 	}
 	
+	// 비밀번호, 비밀번호 확인 입력란의 값 일치 여부 판단
+	function checkPassConfirm() {
+		myForm = document.myForm
+		
+		// 폼 안에 비밀번호 입력 인풋 객체 얻기
+		var password = myForm.password;
+		// 폼 안에 비밀번호 확인 입력 인풋 객체 얻기
+		var passConfirm = myForm.passConfirm;
+		var pwConfirm = document.getElementById("pwConfirm");
+		var flag = false;
+		
+		// 비밀번호 인풋의 값과 비밀번호 확인 인풋 값 비교
+		if (password.value != passConfirm.value) {
+			// 비밀번호 불일치
+			
+			pwConfirm.style.color = "red"
+			pwConfirm.innerHTML = "비밀번호 확인 값이 일치하지 않습니다.";
+			passConfirm.focus();
+		} else {
+			// 비밀번호 확인 일치
+			pwConfirm.style.color = "black";
+			pwConfirm.innerHTML = "";
+			flag = true
+		}
+		
+		return flag;
+	}
+	
+	// 주소 선택 select 의 onchange 이벤트 핸들러 처리 함수
+	function checkAddress() {
+		myForm = document.myForm;
+		
+		// 주소 선택 select 받기
+		var address = myForm.address;
+		
+		var flag = false;
+		
+		if (address.value.length == 0) {
+			alert("주소를 선택하세요");
+			address.focus();
+	
+		} else {
+			flag = true;
+		}
+		
+		return flag;		
+	}
+	
+	// 초기화 버튼 클릭시 확인하는 함수
+	function resetMyForm() {
+		myForm = document.myForm;
+		
+		var yes = confirm("입력값을 초기화 하겠습니까?");		
+		if (yes) {
+			myForm.reset();
+		}
+	}
+	
+	//폼 전송 이벤트 발생시 처리 함수
+	function submitMyForm() {
+		var yes = confirm("입력값을 전송하시겠습니까?");
+		var flag = false;
+		
+		if (yes) {
+			flag = true;
+		}
+		
+		return flag;
+	}
 </script>
 </head>
 <body>
-<form action="next.html" name="myForm">
+<form action="next.html" name="myForm" onsubmit="return submitMyForm();">
 <table class="w3-table-all w3-hoverable">
 	<tr>
 		<th colspan="2" style="width: 50%" class="w3-center">회 원 가 입</th>
@@ -69,13 +143,15 @@
 	<tr>
 		<th>비밀번호 확인*</th>
 		<td>
-			<input type="password" name="passConfirm" required="required" />
+			<input type="password" name="passConfirm" required="required" onblur="checkPassConfirm();"/>
+			<br />
+			<span id="pwConfirm"></span>
 		</td>
 	</tr>
 	<tr>
 		<th>이베일</th>
 		<td>
-			<input type="text" name="email" />
+			<input type="email" name="email" />
 		</td>
 	</tr>
 	<tr>
@@ -103,7 +179,7 @@
 	<tr>
 		<th>주소</th>
 		<td>
-			<select name="address" id=""address"">
+			<select class="w3-select" name="address" id="address" onchange="checkAddress();">
 				<option value="" selected="selected" class="w3-container">== 주소를 선택하세요 ==</option>
 				<option value="seoul">서울</option>
 				<option value="busan">부산</option>
@@ -118,7 +194,7 @@
 	<tr>
 		<td colspan="2" class="w3-center">
 			<input type="submit" value="전송" class="w3-btn w3-white w3-border w3-border-red w3-round" /> &nbsp;
-			<input type="reset" value="초기화" class="w3-btn w3-white w3-border w3-border-red w3-round" />
+			<input type="button" value="초기화" onClick="restMyForm();" class="w3-btn w3-white w3-border w3-border-red w3-round" />
 		</td>
 	</tr>
 </table>
