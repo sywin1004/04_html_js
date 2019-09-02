@@ -23,18 +23,18 @@
 	
 	// 두번째 이미지 정보 확인 함수: images 배열 변수 사용
 	function imageInfo2() {
-		var imgInfo = "이미지 이름:" + document.Penguin1.name + "<br />";
-			imgInfo += "이미지 경로:" + document.Penguin1.src + "<br />";
-			imgInfo += "이미지 너비:" + document.Penguin1.width + "<br />";
-			imgInfo += "이미지 높이:" + document.Penguin1.height + "<br />";
-			imgInfo += "이미지 원본 너비:" + document.Penguin1.naturalWidth + "<br />";
-			imgInfo += "이미지 원본 너비:" + document.Penguin1.naturalHeight + "<br />";
-			imgInfo += "이미지 테두리 굵기:" + document.Penguin1.border + "<br />";
+		var imgInfo = "이미지 이름:" + document.images[1].name + "<br />";
+			imgInfo += "이미지 경로:" + document.images[1].src + "<br />";
+			imgInfo += "이미지 너비:" + document.images[1].width + "<br />";
+			imgInfo += "이미지 높이:" + document.images[1].height + "<br />";
+			imgInfo += "이미지 원본 너비:" + document.images[1].naturalWidth + "<br />";
+			imgInfo += "이미지 원본 너비:" + document.images[1].naturalHeight + "<br />";
+			imgInfo += "이미지 테두리 굵기:" + document.images[1].border + "<br />";
 			
 			// 300 X 300 새 창으로 오픈
-			imgInfoWin = window.open("", "", "width=300px, height=300px");
+			imgInfoWin2 = window.open("", "", "width=300px, height=300px");
 			// 새 창에 이미지 정보가 담긴 변수 출력
-			imgInfoWin.document.write(imgInfo);
+			imgInfoWin2.document.write(imgInfo);
 	}
 </script>
 </head>
