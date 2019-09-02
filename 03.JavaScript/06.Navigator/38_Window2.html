@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>38 새 윈도우</title>
+</head>
+<body>
+<!-- table>(tr>td)*2 -->
+	<table>
+		<tr>
+			<td>
+				<img src="./images/Penguins.jpg" width="350px" height="350px">
+			</td>
+		</tr>	
+		<tr>
+			<td>
+				<input type="checkbox" id="chk1" onclick="opener.close();" />
+				<label for="chk1">오프너 닫기</label>
+				<input type="checkbox" id="chk2" onclick="self.close();" />
+				<label for="chk2">이 창 닫기</label>
+			</td>
+		</tr>	
+	</table>
+</body>
+</html>

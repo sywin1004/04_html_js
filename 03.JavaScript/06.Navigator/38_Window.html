@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>38 Window 객체</title>
+</head>
+<body>
+<h3>Window 객체 사용</h3>
+<hr />
+아래 링크를 클릭하면 새 윈도우를 띄웁니다.<br />
+
+<a href="#" onclick="newWindow=window.open('38_Window2.html', '', 'windth=350', 'height=350', 'scrollbars=no', 'menubar=no', 'locations=yes')">새 창 띄우기</a>
+<a href="#" onclick="newWindow.close();">새 창 닫기</a>
+<!--
+	open()함수에 사용할 수 있는 팝업 윈도우의 설정
+	-----------------------------------------------
+	-toolbar 	: 표준 툴바 생성여부 설정(yes/no)
+	-locations 	: 브라우저의 주소표시줄 locations 영역 생성여부 설정(yes/no)
+	-status 	: 브라우저 하단 status bar 영역 생성여부 설정(yes/no)
+	-menubar 	: 브라우저 상단 menu bar 영역 생성여부 설정(yes/no)
+	-scrollbars : 브라우저 상하, 좌우 스크롤 생성여부 설정(yes/no)
+	-resizable 	: 새로 띄운 창이 사용자에 의해 크기 조절 가능한지 여부 설정(yes/no)
+	-width 		: 창의 가로 크기 설정(픽셀단위)
+	-height 	: 창의 세로 크리 설정(픽셀단위)
+ -->
+</body>
+</html>
