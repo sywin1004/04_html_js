@@ -5,9 +5,35 @@
 <title>39 Window 객체</title>
 <script type="text/javascript">
 	
+	//현재 시간을 Date 객체로부터 얻어내는 함수
+	function showTime() {
+		var today = new Date();
+		
+		var time = today.getFullYear() + "년 ";
+			time += today.getMonth() + 1 + "월 ";
+			time += today.getDate() + "일 ";
+			time += today.getHours() + "시 ";
+			time += today.getMinutes() + "분 ";
+			time += today.getSeconds() + "초 ";
+			
+			// 문서 내에 timer <div> 를 선언하여 시간 표시
+			document.getElementById("timer").innerHTML = time;
+			
+			// 브라우저의 상태표시줄에 시간 표시
+			window.status = time;
+			
+			// 1초 마다 자기 자신 재 호출
+			window.setTimeout("showTime()", 1000);
+	}
 </script>
 </head>
-<body>
-
+<body onload="showTime();">
+	<script type="text/javascript">
+		showTime();
+	</script>
+	
+	<h3>시간이 표시됩니다</h3>
+	<hr />
+	<div id="timer"></div>
 </body>
 </html>

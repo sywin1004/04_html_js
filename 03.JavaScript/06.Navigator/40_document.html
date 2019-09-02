@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>40 document 내장객체</title>
+<script type="text/javascript">
+	
+	// document 객체의 속성확인
+// 	for (obj in document) {
+// 		document.write("[" + obj + "]=" + document[obj] + "<br />")
+// 	}
+	console.log(document.links);
+	console.log(document.forms);
+</script>
+</head>
+<body>
+<!-- 	a[href="http://www.naver.com"]{네이버} -->
+	<a href="http://www.naver.com">네이버</a>
+	<a href="http://www.daum.net">다음</a>
+	
+	<form name="frm" action="">
+		<table>
+			<tr>
+				<td>
+					<input name="chk" type="checkbox" id="chk1" value="1" />
+					<label for="chk1">체크 옵션1</label>
+					<br />
+					<input name="chk" type="checkbox" id="chk2" value="2" />
+					<label for="chk2">체크 옵션2</label>
+					<br />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

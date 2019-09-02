@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>44 image 객체</title>
+<script type="text/javascript">
+	
+	// 첫번 이미지 정보 확인 함수
+	function imageInfo1() {
+		var imgInfo = "이미지 이름:" + document.Penguin1.name + "<br />";
+			imgInfo += "이미지 경로:" + document.Penguin1.src + "<br />";
+			imgInfo += "이미지 너비:" + document.Penguin1.width + "<br />";
+			imgInfo += "이미지 높이:" + document.Penguin1.height + "<br />";
+			imgInfo += "이미지 원본 너비:" + document.Penguin1.naturalWidth + "<br />";
+			imgInfo += "이미지 원본 너비:" + document.Penguin1.naturalHeight + "<br />";
+			imgInfo += "이미지 테두리 굵기:" + document.Penguin1.border + "<br />";
+			
+			// 300 X 300 새 창으로 오픈
+			imgInfoWin = window.open("", "", "width=300px, height=300px");
+			// 새 창에 이미지 정보가 담긴 변수 출력
+			imgInfoWin.document.write(imgInfo);
+	}
+	
+	// 두번째 이미지 정보 확인 함수: images 배열 변수 사용
+	function imageInfo2() {
+		var imgInfo = "이미지 이름:" + document.Penguin1.name + "<br />";
+			imgInfo += "이미지 경로:" + document.Penguin1.src + "<br />";
+			imgInfo += "이미지 너비:" + document.Penguin1.width + "<br />";
+			imgInfo += "이미지 높이:" + document.Penguin1.height + "<br />";
+			imgInfo += "이미지 원본 너비:" + document.Penguin1.naturalWidth + "<br />";
+			imgInfo += "이미지 원본 너비:" + document.Penguin1.naturalHeight + "<br />";
+			imgInfo += "이미지 테두리 굵기:" + document.Penguin1.border + "<br />";
+			
+			// 300 X 300 새 창으로 오픈
+			imgInfoWin = window.open("", "", "width=300px, height=300px");
+			// 새 창에 이미지 정보가 담긴 변수 출력
+			imgInfoWin.document.write(imgInfo);
+	}
+</script>
+</head>
+<body>
+	<img src="./images/Penguins.jpg" width="400px" height="400px" name="Penguin1" border="1" />
+	<br />
+	<button onclick="imageInfo1()">이미지 정보 확인1</button>
+	<br />
+	<img src="./images/Penguins.jpg" width="400px" height="400px" name="Penguin2" />
+	<br />
+	<button onclick="imageInfo2()">이미지 정보 확인2</button>
+	<br />
+</body>
+</html>
