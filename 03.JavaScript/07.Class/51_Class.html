@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>51 Class : 자바스크립트의 클래스</title>
+<script type="text/javascript">
+	
+	// 1. 클래스 선언법 : anonymous function 정의를 사용 function 의 이름을 앞쪽에 선언
+	Member = function(userId, userName, address) {
+		this.userId = userId;
+		this.userName = userName;
+		this.address = address;
+	};
+	
+	// 2. 클래스 선언법 : 일반적인 함수를 정의하듯 정의
+	function UnivMember(userId, userName, address) {
+		this.userId = userId;
+		this.userName = userName;
+		this.address = address;
+	};
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+	// Member 타입 객체 3개 생성	
+	var m001 = new Member("M001", "송종호", "포항시");
+	var m002 = new Member("M002", "박상용", "아산시");
+	var m003 = new Member("M003", "김지후", "수원시");
+	
+	document.write("<h3>멤버 정보 출력</h3>");
+	document.write(m001.userId + ":" + m001.userName + ":" + m001.address + "<br />");
+	document.write(m002.userId + ":" + m002.userName + ":" + m002.address + "<br />");
+	document.write(m003.userId + ":" + m003.userName + ":" + m003.address + "<br />");
+	
+	// UnivMember 타입 객체 생성
+	var um001 = new UnivMember("UM001", "민태영", "구리시");
+	var um002 = new UnivMember("UM002", "김상진", "남양주시");
+	var um003 = new UnivMember("UM003", "박준석", "수원시");
+	// 출력
+	document.write("<h3>UnivMember 출력</h3>");
+	document.write(um001.userId + ":" + um001.userName + ":" + um001.address + "<br />");
+	document.write(um002.userId + ":" + um002.userName + ":" + um002.address + "<br />");
+	document.write(um003.userId + ":" + um003.userName + ":" + um003.address + "<br />");
+	
+	</script>
+	
+	
+</body>
+</html>

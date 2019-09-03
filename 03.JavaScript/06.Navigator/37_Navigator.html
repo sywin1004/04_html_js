@@ -4,12 +4,14 @@
 <meta charset="EUC-KR">
 <title>37 Navigator 객체: Navigator</title>
 <script type="text/javascript">
-	document,write("<h3>Navigator 객체 브라우저의 일반적인 정보를 저장하는 객체</h3>");
+	
+	document.write("<h3>Navigator 객체 브라우저의 일반적인 정보를 저장하는 객체</h3>");
 	document.write("<hr />");+ 
 	
-	for (idx in navigator) {
-		document.write("[" + obj + "]:" + navigator[obj] + "<br />");
+	for (obj in navigator) {
+		document.write("[" + obj + "]=" + navigator[obj] + "<br />");
 	}
+	
 </script>
 </head>
 <body>

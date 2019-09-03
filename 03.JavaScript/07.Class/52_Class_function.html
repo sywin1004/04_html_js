@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>52 Class 의 함수 정의</title>
+<script type="text/javascript">
+	
+	//1. 클래스 선언법 : anonymous function 정의를 사용 function 의 이름을 앞쪽에 선언
+	Member = function(userId, userName, address) {
+		// 1. 클래스 프로퍼티 선언 (자바의 멤버 변수 같은 속성 선언)
+		this.userId = userId;
+		this.userName = userName;
+		this.address = address;
+		
+		// 2. 클래스 프로퍼티로 함수를 선언
+		this.getUserId = function() {
+			return this.userId;
+		}
+		
+		this.getUserName = function() {
+			return this.userName;
+		}
+		this.getAddress = function() {
+			return this.address;
+		}
+		
+		this.setUserId = function(userId) {
+			this.userId = userId;
+		}
+		
+		this.setUserName = function(userName) {
+			this.userName = userName;
+		}
+		
+		this.setAddress = function(address) {
+			this.address = address;
+		}
+		
+		this.getFullInfo = function () {
+			return this.userId + ":" + this.userName + ":" + this.address;
+		}
+	};
+	
+		
+	
+	
+	
+	
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var m004 = new Member("M004", "김지원", "포천리");
+		
+		document.write("<h3>m004프로퍼티 확인<h3 />");
+		
+		for (var prop in m004) {
+			document.write("[" + prop + "]=" + m004[prop] + "<br />");
+		}
+		
+		document.write("<hr />");
+		
+		document.write("<h3>m004 정보 출력</h3>");
+		document.write("<hr />");
+		document.write(m004.getFullInfo() + "<br />");
+		document.write("<hr />");
+		
+		document.write("<h3>m004 주소 변경</h3>");
+		document.write("<hr />");
+		// 주소 변경하는 코드
+		m004.setAddress('보라카이');
+		
+		// 변경내용 출력
+		document.write(m004.getFullInfo() + "<br />");
+		
+		document.write("<h3>m004 주소만 출력</h3>");
+		document.write(m004.getAddress() + "<br />");
+		
+	</script>
+</body>
+</html>
