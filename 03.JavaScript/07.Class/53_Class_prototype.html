@@ -7,18 +7,60 @@
 		
 	//1. 클래스 선언법 : anonymous function 정의를 사용 function 의 이름을 앞쪽에 선언
 	Member = function(userId, userName, address) {
+		// 클래스 프로퍼티 선언(자바의 멤버 변수 같은 속성 선언)
 		this.userId = userId;
 		this.userName = userName;
 		this.address = address;
 	};
 	
-	// prototype 을 사용하여 함수 정의
+	// prototype 을 사용하여 함수 정의를 추가
+	Member.prototype.getUserId = function() {
+		return this.userId;
+	}
+	
+	Member.prototype.getUserName = function() {
+		return this.userName;
+	}
+	
+	Member.prototype.getAddress = function() {
+		return this.address;
+	}
 	
 	
+	Member.prototype.setUserId = function(userId) {
+		this.userId = userId;
+	}
+	
+	Member.prototype.setUserName = function(userName) {
+		this.userName = userName;
+	}
+	
+	Member.prototype.setAddress = function(address) {
+		this.address = address;
+	}
+	
+	Member.prototype.getFullInfo = function() {
+		return this.userId + ":" + this.userName + ":" + this.address;
+	}
 	
 </script>
 </head>
 <body>
-
+	<script type="text/javascript">
+		var m005 = new Member("M005", "조기현", "수원시");
+		
+		document.write("<h3>m005 멤버의 프로퍼티 확인</h3>");
+		document.write("<hr />");
+		for ( var prop in m005) {
+			document.write("[" + prop +"]=" + m005[prop] + "<br />");
+			
+		}
+		
+		document.write("<hr />");
+		document.write("<h3>m005 멤버의 주소 변경</h3>");
+		document.write("<hr />");
+		m005.setAddress("New York");
+		document.write(m005.getFullInfo + "<br />");
+	</script>
 </body>
 </html>

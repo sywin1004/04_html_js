@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>54 Class 의 함수 정의 : JSON 표기법</title>
+<!-- JSON : JavaScript Object Notation -->
+<!-- ==========================================
+	1. 텍스트로 데이터를 표기하는 기법
+	2. 특별한 구조로 데이터를 표기하는 기법
+	3. {key:value, key:value, key:value, ...}
+	4. key 는 반드시 문자값
+	5. value 는 모든 형태의 객체가 올 수 있따.
+		=> (1) 문자
+		=> (2) 숫자
+		=> (3) 배열 : [값1, 값2, 값3, ... , 값n]
+		=> (4) 클래스 객체 = (함수 function) : function() {...}
+	6.
+		=======================================		
+ -->
+<script type="text/javascript">
+	//1. 클래스 선언법 : anonymous function 정의를 사용 function 의 이름을 앞쪽에 선언
+	Member = function(userId, userName, address) {
+		// 클래스 프로퍼티 선언(자바의 멤버 변수 같은 속성 선언)
+		this.userId = userId;
+		this.userName = userName;
+		this.address = address;
+	};
+	
+	Member.prototype = {
+			getUserId:function() {
+				return this.userId;
+			},
+			getUserName:function() {
+				return this.userName;
+			},
+			getAddress:function() {
+				return this.address;
+			},
+			setUserId:function(userId) {
+				this.userId = userId;
+			},
+			setUserName:function(userName) {
+				this.userName = userName;
+			},
+			setAddress:function(address) {
+				this.address = address;
+			},
+			getFullInfo:function() {
+				return this.userId + ":" + this.userName + ":" + this.address;
+			}
+	}
+</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var m006 = new Member("M006", "강유환", "천안");
+		
+		document.write("<h3>m006 멤버의 프로퍼티 확인</h3>");
+		document.write("<hr />");
+		for ( var prop in m006) {
+			document.write("[" + prop +"]=" + m006[prop] + "<br />");
+			
+		}
+		
+		document.write("<hr />");
+		document.write("<h3>m006 멤버의 주소 변경</h3>");
+		document.write("<hr />");
+		m006.setAddress("앙코르와트");
+		document.write(m006.getFullInfo + "<br />");
+	</script>
+</body>
+</html>

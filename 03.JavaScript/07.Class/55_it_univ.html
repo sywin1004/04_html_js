@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>55 Member 클래스 정의</title>
+<script type="text/javascript">
+	Member = function(userId, userName, address) {
+		this.userId = userId;
+		this.userName = userName;
+		this.address = address
+		
+	}
+	
+	Member.prototype = {
+			getUserId:function() {
+				
+			},
+			getUserName:function() {
+				
+			},
+			getAddress:function() {
+				
+			},
+			setUserId:function(userId) {
+				
+			},
+			setUserName:function(userName) {
+				
+			},
+			setAddress:function(address) {
+				
+			},
+			getFullInfo:function() {
+				return this.userId + ":" + this.userNamer + ":" + this.address;
+			}			
+	}
+	
+	
+	var m001 = new Member("M001", "송종호", "포항시");
+	var m002 = new Member("M002", "박상용", "아산시");
+	var m003 = new Member("M003", "김지후", "수원시");
+	var m004 = new Member("M004", "김지원", "포천리");
+	var m005 = new Member("M005", "조기현", "수원시");
+	var m006 = new Member("M006", "강유환", "천안시");
+	
+	members = new Array (m001, m002, m003, m004, m005, m006);
+	
+	function displayMembers() {
+		for (var idx = 0; idx < members.length; idx++) {
+			document.write("<tr>");
+				document.write("<td><input type='radio' name='detail' onclick='selectMember();' /></td>");
+				document.write("<td>" + members[idx].userID + "</td>");
+				document.write("<td>" + members[idx].userName + "</td>");
+				document.write("<td>" + members[idx].address + "</td>");
+			document.write("</tr>");
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<h3>Member 클래스를 활용한 구성원 관리</h3>
+	<hr />
+	<form action="">
+		<table>
+			<tr>
+				<td>아이디</td>
+				<td>
+					<input type="text" name="userId" />
+				</td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td>
+				 <input type="text" name="userName" />
+				</td>
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td>
+					<input type="text" name="address" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	<hr />
+	
+	<form action="">
+		<table>
+			<tr>
+				<th></th>
+				<th>아이디</th>
+				<th>이름</th>
+				<th>주소</th>				
+			</tr>
+			
+			
+		</table>
+	</form>
+	<!-- 
+		1. Member 클래스 정의 : prototype + JSON 표기법으로 정의
+		2. Member 객체가 들어가는 Array (배열) 생성.
+		   배열 변수 이름 : members
+		3. m001 ~ m006 의 정보를 사용하여 members 배열을 생성
+		4. 33_it_univ 코드 참고
+		   (1) 상단에 상세정보를 확인하는 표
+		   (2) 라디오 버튼이 있는 목록 출력 표
+		   (3) 구성원 1명을 선택할 수 있는 select
+		   (4) 각 요소에 맞는 이벤트 핸들러 함수 등 작성 
+	
+	 -->
+</body>
+</html>
