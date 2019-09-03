@@ -49,10 +49,43 @@
 		for (var idx = 0; idx < members.length; idx++) {
 			document.write("<tr>");
 				document.write("<td><input type='radio' name='detail' onclick='selectMember();' /></td>");
-				document.write("<td>" + members[idx].userID + "</td>");
+				document.write("<td>" + members[idx].userId + "</td>");
 				document.write("<td>" + members[idx].userName + "</td>");
 				document.write("<td>" + members[idx].address + "</td>");
 			document.write("</tr>");
+		}
+	}
+	
+	// 셀렉트 박스의 옵션을 동적으로 그리는 함수
+	function displayOptions() {
+		for (var idx = 0; idx < members.length; idx++) {
+			document.write("<option value='" + members[idx].userId + "'>" 
+					       + members[idx].userName + "</option>")
+		}
+	}
+	
+	// 목록 폼에서 라디오 클릭시 이벤트 처리 함수
+	function selectMember() {
+		for (var idx = 0; idx < members.length; idx++) {
+			if (document.forms[1].detail[idx].checked) {
+				document.forms[0].userId.value = members[idx].userId;
+				document.forms[0].userName.value = members[idx].userName;
+				document.forms[0].address.value = members[idx].address;
+				break;
+			}
+		}
+	}
+	
+	// 구성원 이름을 선택하는 셀렉트 박스의
+	// onchange 이벤트 핸들러 처리 함수
+	function searchMember() {
+		for (var idx =0; idx < members.length; idx++) {
+			if(members[idx].userId == document.selectForm.selectId.value) {
+				document.forms[0].userId.value = members[idx].userId;
+				document.forms[0].userName.value = members[idx].userName;
+				document.forms[0].address.value = members[idx].address;
+				break;
+			}
 		}
 	}
 	
@@ -62,7 +95,7 @@
 	<h3>Member 클래스를 활용한 구성원 관리</h3>
 	<hr />
 	<form action="">
-		<table>
+		<table border="1">
 			<tr>
 				<td>아이디</td>
 				<td>
@@ -86,7 +119,7 @@
 	
 	<hr />
 	
-	<form action="">
+	<form action="" >
 		<table>
 			<tr>
 				<th></th>
@@ -94,11 +127,26 @@
 				<th>이름</th>
 				<th>주소</th>				
 			</tr>
-			
+			<script type="text/javascript">
+				displayMembers();
+			</script>
 			
 		</table>
 	</form>
-	<!-- 
+	
+	<hr />
+	
+<!-- 	form[name="selectForm]>select[name="selectId" onchang="seachMember();"]>option[value=""] -->
+	<form action="" name="selectForm">
+		구성원선택: 
+		<select name="selectId" id="" onchange="searchMember();" >
+			<option value="">===구성원 선택===</option>
+			<script type="text/javascript">
+				displayOptions();
+			</script>
+		</select>
+	</form>
+	<!--
 		1. Member 클래스 정의 : prototype + JSON 표기법으로 정의
 		2. Member 객체가 들어가는 Array (배열) 생성.
 		   배열 변수 이름 : members

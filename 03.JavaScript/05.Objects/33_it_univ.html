@@ -15,8 +15,7 @@
 	function displayMembers() {
 		for (var idx = 0; idx < userIds.length; idx++) {
 			document.write("<tr>");
-				document.write("<td><input type='radio' name='detail' "
-						                +" onclick='selectMember();' /></td>");
+				document.write("<td><input type='radio' name='detail' onclick='selectMember();' /></td>");
 				document.write("<td>" + userIds[idx] + "</td>");
 				document.write("<td>" + userNames[idx] + "</td>");
 				document.write("<td>" + addresses[idx] + "</td>");
